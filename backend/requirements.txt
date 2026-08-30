@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+motor
+pymongo
+pyjwt
+bcrypt
+pydantic[email]
+python-dotenv
+sentence-transformers
+numpy
+scikit-learn
+pandas
+python-multipart
+rapidfuzz
+pytest

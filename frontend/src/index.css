@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Smart Recipe - design tokens · tema "Teal & Koral"
+   ---------------------------------------------------------------
+   - Primary "brand" = TEAL, dipetakan ke skala `green-*` Tailwind,
+     jadi semua `bg-green-*`, `text-green-*` ... langsung jadi teal
+     tanpa mengubah komponen. Teal pekat -> kontras tinggi, tidak pudar.
+   - Neutral grays = krim sejuk + ink teal-charcoal, lembut di mata.
+   - "sage" di-repurpose jadi KORAL - aksen hangat untuk MatchScoreBar
+     (badge "% cocok"), penyeimbang teal yang sejuk.
+   - Font: Nunito Sans (body, membulat & nyaman) + Fraunces (display,
+     serif lembut) - lihat index.html.
+   --------------------------------------------------------------- */
+
+@theme {
+  /* Teal - primary brand; semua utilitas green ikut otomatis */
+  --color-green-50:  #EAF4F2;
+  --color-green-100: #CFE7E4;
+  --color-green-200: #A9D5CF;
+  --color-green-300: #74BAB1;
+  --color-green-400: #3E9B90;
+  --color-green-500: #117C76;  /* tombol - kontras teks putih ~4.9:1 */
+  --color-green-600: #0E6863;
+  --color-green-700: #0C544F;
+  --color-green-800: #0B413E;
+  --color-green-900: #0A3331;
+
+  /* Koral - aksen hangat (dipakai MatchScoreBar via kelas sage-*) */
+  --color-sage-50:  #FEF0EC;
+  --color-sage-100: #FBDDD4;
+  --color-sage-200: #F6C2B4;
+  --color-sage-500: #D85C42;  /* badge terisi + teks putih ~3.4:1 (bold) */
+  --color-sage-600: #C24E37;
+  --color-sage-700: #A23F2C;  /* teks koral di atas putih - kontras kuat */
+
+  /* Krim sejuk / ink teal-charcoal - menggantikan gray, lembut di mata */
+  --color-gray-50:  #F4F6F5;
+  --color-gray-100: #EBEFEE;
+  --color-gray-200: #DCE3E1;
+  --color-gray-300: #C2CCCA;
+  --color-gray-400: #97A4A2;
+  --color-gray-500: #66716F;
+  --color-gray-600: #4F5957;
+  --color-gray-700: #3B4543;
+  --color-gray-800: #283230;
+  --color-gray-900: #15302E;
+
+  /* Koral terang - aksen kedua siap pakai bila perlu highlight non-badge */
+  --color-coral-300: #F6A48F;
+  --color-coral-500: #F2785C;
+
+  /* Typography */
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+
+  /* Shadows - ink teal-charcoal lembut */
+  --shadow-card: 0 1px 2px rgba(21, 48, 46, 0.05),
+    0 1px 3px rgba(21, 48, 46, 0.05);
+  --shadow-card-hover: 0 10px 24px -8px rgba(21, 48, 46, 0.12),
+    0 4px 8px -4px rgba(21, 48, 46, 0.05);
+  --shadow-pop: 0 16px 48px -16px rgba(21, 48, 46, 0.20);
+}
+
+/* Base */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-gray-900);
+  background-color: var(--color-gray-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display headings - Fraunces, optical sizing auto so big headings pick the
+   display cut. Slightly looser tracking than the old serif: softer, less rigid. */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+h1 { letter-spacing: -0.015em; }
+
+/* Custom utility helpers (kept tiny) */
+.font-display { font-family: var(--font-display); font-optical-sizing: auto; }
+.shadow-card        { box-shadow: var(--shadow-card); }
+.shadow-card-hover  { box-shadow: var(--shadow-card-hover); }
+.shadow-pop         { box-shadow: var(--shadow-pop); }
+
+/* Focus ring that respects keyboard nav */
+:where(button, a, input, select, textarea):focus-visible {
+  outline: 2px solid var(--color-green-500);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Scrollbar polish (WebKit only) */
+::-webkit-scrollbar         { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb   { background: var(--color-gray-200); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-gray-300); }

@@ -1,0 +1,38 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+
+# Environment
+.env
+.env.*
+
+# ML / Data
+*.npy
+*.pkl
+# regenerable companion of recipe_vectors.npy
+recipe_ids.json
+
+# Node
+node_modules/
+dist/
+# vite-plugin-pwa dev build output
+dev-dist/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
