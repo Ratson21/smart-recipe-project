@@ -1,0 +1,28 @@
+Mongo: 14945 recipes in 'smart_recipe_db'
+
+== Initialising engine (model + recipe_vectors.npy load - excluded from timing) ==
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 10428.12it/s]
+Engine ready in 9.31s (14945 vectors) - model device: mps:0
+
+== Building TF-IDF baseline model (excluded from timing) ==
+TF-IDF ready in 0.34s
+
+== Timing 20 queries x 5 runs, both methods (1 warm-up call each, discarded) ==
+
+Metode                            Mean (ms)  Median (ms)   P95 (ms)   Min (ms)   Max (ms)
+-----------------------------------------------------------------------------------------
+Sentence Transformer + WSIE          16.512       15.425     23.751     12.068     42.442
+TF-IDF (Baseline)                     2.799        2.768      3.181      2.257      3.477
+-----------------------------------------------------------------------------------------
+
+n = 100 measurements per method (20 query x 5 run)
+
+== Machine spec ==
+  platform: macOS-26.6.2-arm64-arm-64bit
+  processor: arm
+  python_version: 3.11.9
+  torch_version: 2.14.0
+  cuda_available: False
+  mps_available: True
+
+Saved results -> /Users/ratsonfebrian/skripai/smart-recipe-project/backend/latency_study/latency_results.json

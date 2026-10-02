@@ -1,0 +1,398 @@
+{
+  "k": 5,
+  "n_queries": 20,
+  "runs_per_query": 5,
+  "engine_startup_seconds_excluded": 9.315,
+  "machine_spec": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python_version": "3.11.9",
+    "torch_version": "2.14.0",
+    "cuda_available": false,
+    "mps_available": true
+  },
+  "sentence_transformer_wsie": {
+    "overall": {
+      "n": 100,
+      "mean_ms": 16.512,
+      "median_ms": 15.425,
+      "p95_ms": 23.751,
+      "min_ms": 12.068,
+      "max_ms": 42.442
+    },
+    "per_query": [
+      {
+        "query": "ikan, bawang merah, cabai",
+        "n": 5,
+        "mean_ms": 16.946,
+        "median_ms": 15.054,
+        "p95_ms": 21.657,
+        "min_ms": 14.206,
+        "max_ms": 21.657
+      },
+      {
+        "query": "seafood, bawang merah, cabe",
+        "n": 5,
+        "mean_ms": 14.937,
+        "median_ms": 15.008,
+        "p95_ms": 16.617,
+        "min_ms": 12.899,
+        "max_ms": 16.617
+      },
+      {
+        "query": "tempe, kecap, cabai, garam, lada, daun salam",
+        "n": 5,
+        "mean_ms": 17.599,
+        "median_ms": 16.281,
+        "p95_ms": 23.695,
+        "min_ms": 13.65,
+        "max_ms": 23.695
+      },
+      {
+        "query": "tempe, tahu, tomat, lada, kecap",
+        "n": 5,
+        "mean_ms": 16.043,
+        "median_ms": 14.136,
+        "p95_ms": 23.751,
+        "min_ms": 13.949,
+        "max_ms": 23.751
+      },
+      {
+        "query": "telur, bawang merah, bawang putih, tomat, cabai",
+        "n": 5,
+        "mean_ms": 15.323,
+        "median_ms": 14.843,
+        "p95_ms": 17.47,
+        "min_ms": 14.444,
+        "max_ms": 17.47
+      },
+      {
+        "query": "kecap, lada, daging sapi, bakso, kaldu",
+        "n": 5,
+        "mean_ms": 18.571,
+        "median_ms": 18.901,
+        "p95_ms": 26.862,
+        "min_ms": 13.88,
+        "max_ms": 26.862
+      },
+      {
+        "query": "telor, garam, kecap, saos, lada, tomat, cabai",
+        "n": 5,
+        "mean_ms": 18.078,
+        "median_ms": 15.943,
+        "p95_ms": 26.721,
+        "min_ms": 15.674,
+        "max_ms": 26.721
+      },
+      {
+        "query": "tahu, bawang putih, kunyit",
+        "n": 5,
+        "mean_ms": 15.948,
+        "median_ms": 16.464,
+        "p95_ms": 19.052,
+        "min_ms": 13.733,
+        "max_ms": 19.052
+      },
+      {
+        "query": "daging, santan, kemiri, kunyit",
+        "n": 5,
+        "mean_ms": 16.811,
+        "median_ms": 16.467,
+        "p95_ms": 22.009,
+        "min_ms": 13.25,
+        "max_ms": 22.009
+      },
+      {
+        "query": "daging, santan, garam, kecap, saos",
+        "n": 5,
+        "mean_ms": 21.787,
+        "median_ms": 14.495,
+        "p95_ms": 42.442,
+        "min_ms": 13.995,
+        "max_ms": 42.442
+      },
+      {
+        "query": "ayam, kecap, kemiri",
+        "n": 5,
+        "mean_ms": 15.636,
+        "median_ms": 15.503,
+        "p95_ms": 16.398,
+        "min_ms": 14.82,
+        "max_ms": 16.398
+      },
+      {
+        "query": "ayam, kecap, saos, lada, tomat",
+        "n": 5,
+        "mean_ms": 16.871,
+        "median_ms": 17.876,
+        "p95_ms": 19.29,
+        "min_ms": 14.085,
+        "max_ms": 19.29
+      },
+      {
+        "query": "toge, kol, ayam",
+        "n": 5,
+        "mean_ms": 14.752,
+        "median_ms": 13.941,
+        "p95_ms": 16.932,
+        "min_ms": 12.743,
+        "max_ms": 16.932
+      },
+      {
+        "query": "unggas, santan, kunyit, tomat, garam, kecap",
+        "n": 5,
+        "mean_ms": 16.72,
+        "median_ms": 17.09,
+        "p95_ms": 19.464,
+        "min_ms": 13.952,
+        "max_ms": 19.464
+      },
+      {
+        "query": "ikan, kunyit, asam",
+        "n": 5,
+        "mean_ms": 16.247,
+        "median_ms": 13.32,
+        "p95_ms": 24.99,
+        "min_ms": 12.068,
+        "max_ms": 24.99
+      },
+      {
+        "query": "lele, kunyit, garam, kecap, lengkuas, santan",
+        "n": 5,
+        "mean_ms": 19.005,
+        "median_ms": 17.852,
+        "p95_ms": 27.434,
+        "min_ms": 13.799,
+        "max_ms": 27.434
+      },
+      {
+        "query": "bayam, bawang putih, garam",
+        "n": 5,
+        "mean_ms": 14.336,
+        "median_ms": 13.092,
+        "p95_ms": 18.349,
+        "min_ms": 12.467,
+        "max_ms": 18.349
+      },
+      {
+        "query": "sayuran hijau, bawang putih, bawang merah, lada, garam, kecap",
+        "n": 5,
+        "mean_ms": 15.052,
+        "median_ms": 15.675,
+        "p95_ms": 16.854,
+        "min_ms": 12.89,
+        "max_ms": 16.854
+      },
+      {
+        "query": "kangkung, bawang putih, terasi, garam, kecap",
+        "n": 5,
+        "mean_ms": 14.026,
+        "median_ms": 13.214,
+        "p95_ms": 17.26,
+        "min_ms": 12.459,
+        "max_ms": 17.26
+      },
+      {
+        "query": "gurame, garam, kecap, saos, bawang putih",
+        "n": 5,
+        "mean_ms": 15.545,
+        "median_ms": 14.574,
+        "p95_ms": 19.139,
+        "min_ms": 13.749,
+        "max_ms": 19.139
+      }
+    ]
+  },
+  "tfidf_baseline": {
+    "overall": {
+      "n": 100,
+      "mean_ms": 2.799,
+      "median_ms": 2.768,
+      "p95_ms": 3.181,
+      "min_ms": 2.257,
+      "max_ms": 3.477
+    },
+    "per_query": [
+      {
+        "query": "ikan, bawang merah, cabai",
+        "n": 5,
+        "mean_ms": 2.932,
+        "median_ms": 2.855,
+        "p95_ms": 3.477,
+        "min_ms": 2.678,
+        "max_ms": 3.477
+      },
+      {
+        "query": "seafood, bawang merah, cabe",
+        "n": 5,
+        "mean_ms": 2.807,
+        "median_ms": 2.758,
+        "p95_ms": 3.077,
+        "min_ms": 2.613,
+        "max_ms": 3.077
+      },
+      {
+        "query": "tempe, kecap, cabai, garam, lada, daun salam",
+        "n": 5,
+        "mean_ms": 2.872,
+        "median_ms": 2.826,
+        "p95_ms": 3.041,
+        "min_ms": 2.687,
+        "max_ms": 3.041
+      },
+      {
+        "query": "tempe, tahu, tomat, lada, kecap",
+        "n": 5,
+        "mean_ms": 2.774,
+        "median_ms": 2.747,
+        "p95_ms": 3.089,
+        "min_ms": 2.567,
+        "max_ms": 3.089
+      },
+      {
+        "query": "telur, bawang merah, bawang putih, tomat, cabai",
+        "n": 5,
+        "mean_ms": 2.998,
+        "median_ms": 3.072,
+        "p95_ms": 3.233,
+        "min_ms": 2.745,
+        "max_ms": 3.233
+      },
+      {
+        "query": "kecap, lada, daging sapi, bakso, kaldu",
+        "n": 5,
+        "mean_ms": 2.784,
+        "median_ms": 2.601,
+        "p95_ms": 3.362,
+        "min_ms": 2.539,
+        "max_ms": 3.362
+      },
+      {
+        "query": "telor, garam, kecap, saos, lada, tomat, cabai",
+        "n": 5,
+        "mean_ms": 2.889,
+        "median_ms": 2.897,
+        "p95_ms": 3.02,
+        "min_ms": 2.745,
+        "max_ms": 3.02
+      },
+      {
+        "query": "tahu, bawang putih, kunyit",
+        "n": 5,
+        "mean_ms": 2.759,
+        "median_ms": 2.737,
+        "p95_ms": 2.956,
+        "min_ms": 2.611,
+        "max_ms": 2.956
+      },
+      {
+        "query": "daging, santan, kemiri, kunyit",
+        "n": 5,
+        "mean_ms": 2.57,
+        "median_ms": 2.557,
+        "p95_ms": 2.966,
+        "min_ms": 2.257,
+        "max_ms": 2.966
+      },
+      {
+        "query": "daging, santan, garam, kecap, saos",
+        "n": 5,
+        "mean_ms": 2.739,
+        "median_ms": 2.702,
+        "p95_ms": 2.968,
+        "min_ms": 2.61,
+        "max_ms": 2.968
+      },
+      {
+        "query": "ayam, kecap, kemiri",
+        "n": 5,
+        "mean_ms": 2.469,
+        "median_ms": 2.451,
+        "p95_ms": 2.578,
+        "min_ms": 2.4,
+        "max_ms": 2.578
+      },
+      {
+        "query": "ayam, kecap, saos, lada, tomat",
+        "n": 5,
+        "mean_ms": 2.702,
+        "median_ms": 2.699,
+        "p95_ms": 2.826,
+        "min_ms": 2.578,
+        "max_ms": 2.826
+      },
+      {
+        "query": "toge, kol, ayam",
+        "n": 5,
+        "mean_ms": 2.632,
+        "median_ms": 2.538,
+        "p95_ms": 2.933,
+        "min_ms": 2.373,
+        "max_ms": 2.933
+      },
+      {
+        "query": "unggas, santan, kunyit, tomat, garam, kecap",
+        "n": 5,
+        "mean_ms": 2.993,
+        "median_ms": 2.91,
+        "p95_ms": 3.257,
+        "min_ms": 2.767,
+        "max_ms": 3.257
+      },
+      {
+        "query": "ikan, kunyit, asam",
+        "n": 5,
+        "mean_ms": 2.617,
+        "median_ms": 2.723,
+        "p95_ms": 2.752,
+        "min_ms": 2.358,
+        "max_ms": 2.752
+      },
+      {
+        "query": "lele, kunyit, garam, kecap, lengkuas, santan",
+        "n": 5,
+        "mean_ms": 2.744,
+        "median_ms": 2.677,
+        "p95_ms": 2.994,
+        "min_ms": 2.609,
+        "max_ms": 2.994
+      },
+      {
+        "query": "bayam, bawang putih, garam",
+        "n": 5,
+        "mean_ms": 2.884,
+        "median_ms": 2.807,
+        "p95_ms": 3.115,
+        "min_ms": 2.75,
+        "max_ms": 3.115
+      },
+      {
+        "query": "sayuran hijau, bawang putih, bawang merah, lada, garam, kecap",
+        "n": 5,
+        "mean_ms": 2.979,
+        "median_ms": 2.986,
+        "p95_ms": 3.2,
+        "min_ms": 2.797,
+        "max_ms": 3.2
+      },
+      {
+        "query": "kangkung, bawang putih, terasi, garam, kecap",
+        "n": 5,
+        "mean_ms": 2.915,
+        "median_ms": 2.896,
+        "p95_ms": 3.113,
+        "min_ms": 2.713,
+        "max_ms": 3.113
+      },
+      {
+        "query": "gurame, garam, kecap, saos, bawang putih",
+        "n": 5,
+        "mean_ms": 2.918,
+        "median_ms": 2.925,
+        "p95_ms": 3.109,
+        "min_ms": 2.732,
+        "max_ms": 3.109
+      }
+    ]
+  }
+}

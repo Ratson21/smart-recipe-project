@@ -1,0 +1,29 @@
+Mongo: 14945 recipes in 'smart_recipe_db'
+
+== Initialising engine forced to CPU (excluded from timing) ==
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9323.49it/s]
+Engine ready in 12.44s (14945 vectors) - model device: cpu
+
+== Building TF-IDF baseline model (excluded from timing) ==
+TF-IDF ready in 0.24s
+
+== Timing 20 queries x 5 runs, both methods (1 warm-up call each, discarded), CPU-only ==
+
+Metode                            Mean (ms)  Median (ms)   P95 (ms)   Min (ms)   Max (ms)
+-----------------------------------------------------------------------------------------
+Sentence Transformer + WSIE (CPU)     11.654       11.563     12.929     10.388     15.293
+TF-IDF (Baseline)                     2.508        2.548      2.720      2.106      2.786
+-----------------------------------------------------------------------------------------
+
+n = 100 measurements per method (20 query x 5 run)
+
+== Machine spec ==
+  platform: macOS-26.6.2-arm64-arm-64bit
+  processor: arm
+  python_version: 3.11.9
+  torch_version: 2.14.0
+  cuda_available: False
+  mps_available: True
+  forced_device: cpu
+
+Saved results -> /Users/ratsonfebrian/skripai/smart-recipe-project/backend/latency_study/latency_results_cpu.json
