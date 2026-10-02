@@ -419,7 +419,7 @@ class RecommendationEngine:
         t = time.perf_counter()
         logger.info("Loading SentenceTransformer '%s' ...", settings.model_name)
         self.model = await asyncio.to_thread(
-            SentenceTransformer, settings.model_name
+            SentenceTransformer, settings.model_name, device="cpu"
         )
         logger.info("Model loaded in %.1fs", time.perf_counter() - t)
 
