@@ -39,7 +39,7 @@ NON_CANONICAL = {"seafood", "cabe", "telor", "toge", "taoge", "unggas",
                  "sayuran hijau", "sayur hijau"}
 
 
-# ── Bentuk test set ───────────────────────────────────────────────────────
+# Bentuk test set
 
 def test_test_set_has_expected_subset_sizes():
     counts = {c: sum(1 for e in TEST_SET if e.category == c)
@@ -58,7 +58,7 @@ def test_every_category_is_known():
         assert e.category in (CAT_PLAIN, CAT_SYNONYM)
 
 
-# ── Invariant keyword ground truth ────────────────────────────────────────
+# Invariant keyword ground truth
 
 @pytest.mark.parametrize("entry", TEST_SET, ids=lambda e: e.query)
 def test_keywords_contain_no_seasoning(entry):
@@ -129,7 +129,7 @@ def test_the_paired_queries_share_a_ground_truth():
     )
 
 
-# ── Ekspektasi ────────────────────────────────────────────────────────────
+# Ekspektasi
 
 @pytest.mark.parametrize("entry", TEST_SET, ids=lambda e: e.query)
 def test_gt_band_is_a_valid_non_empty_range(entry):
@@ -144,7 +144,7 @@ def test_precision_target_is_uniform_and_attainable():
     assert (TARGET_RATIO * K) == pytest.approx(round(TARGET_RATIO * K))
 
 
-# ── Ekspektasi recall ─────────────────────────────────────────────────────
+# Ekspektasi recall
 
 def test_recall_ceiling_shrinks_as_ground_truth_grows():
     """Hanya K hasil yang kembali, jadi GT besar membatasi recall secara
@@ -189,7 +189,7 @@ def test_recall_verdict_mirrors_precision_when_gt_is_at_least_k():
             assert (precision >= TARGET_RATIO) == (recall >= expected_recall(gt) - 1e-9)
 
 
-# ── Metrik ────────────────────────────────────────────────────────────────
+# Metrik
 
 def test_reported_k_is_five():
     assert K == 5

@@ -14,7 +14,7 @@ from app.services.recommendation_engine import engine
 router = APIRouter(prefix="/api/v1/recommendations", tags=["recommendations"])
 
 
-# ── Request / Response schemas ────────────────────────────────────────────
+# Request / Response schemas
 
 class SearchFilters(BaseModel):
     max_time: Optional[int] = Field(None, ge=1, description="Maks waktu masak (menit)")
@@ -41,7 +41,7 @@ class SmartSearchResponse(BaseModel):
     ignored_ingredients: list[str] = []  # query ingredients not found in the dataset
 
 
-# ── Serializer ────────────────────────────────────────────────────────────
+# Serializer
 
 def _to_card(doc: dict) -> RecipeCard:
     return RecipeCard(
@@ -58,7 +58,7 @@ def _to_card(doc: dict) -> RecipeCard:
     )
 
 
-# ── Endpoints ─────────────────────────────────────────────────────────────
+# Endpoints
 
 @router.post(
     "/smart-search",

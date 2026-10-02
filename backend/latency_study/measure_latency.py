@@ -152,7 +152,7 @@ async def main() -> None:
 
     spec = _machine_spec()
 
-    # ── Print summary table ─────────────────────────────────────────────
+    # Print summary table
     header = f"{'Metode':<32} {'Mean (ms)':>10} {'Median (ms)':>12} {'P95 (ms)':>10} {'Min (ms)':>10} {'Max (ms)':>10}"
     print("\n" + header)
     print("-" * len(header))

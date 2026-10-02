@@ -11,7 +11,7 @@ import pandas as pd
 from pymongo import MongoClient, InsertOne
 from dotenv import load_dotenv
 
-# ── Load .env ──────────────────────────────────────────────────────────────
+# Load .env
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 
@@ -74,7 +74,7 @@ def main():
 
     print()  # newline after progress line
 
-    # ── Indexes ────────────────────────────────────────────────────────────
+    # Indexes
     collection.create_index("title")
     collection.create_index("category")
     collection.create_index("difficulty_level")

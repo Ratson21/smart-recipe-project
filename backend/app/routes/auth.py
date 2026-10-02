@@ -11,7 +11,7 @@ from app.models.user import TokenResponse, UserLogin, UserRegister, UserResponse
 router = APIRouter(prefix="/api/v1/auth", tags=["auth"])
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────
+# Helpers
 
 def _to_user_response(doc: dict) -> UserResponse:
     return UserResponse(
@@ -22,7 +22,7 @@ def _to_user_response(doc: dict) -> UserResponse:
     )
 
 
-# ── Endpoints ─────────────────────────────────────────────────────────────
+# Endpoints
 
 @router.post(
     "/register",

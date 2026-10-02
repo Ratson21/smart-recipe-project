@@ -101,7 +101,7 @@ class RecommendationEngine:
         self.recipe_ingredient_counts: np.ndarray = np.zeros(0, dtype=np.int32)
         self._ready:     bool = False
 
-    # ── Public API ────────────────────────────────────────────────────────
+    # Public API
 
     @property
     def is_ready(self) -> bool:
@@ -305,7 +305,7 @@ class RecommendationEngine:
                 break
         return results
 
-    # ── Private search helpers ────────────────────────────────────────────
+    # Private search helpers
 
     def _lexical_coverage(self, query_text: str) -> np.ndarray:
         """
@@ -413,7 +413,7 @@ class RecommendationEngine:
         docs = await db["recipes"].find(query, {"_id": 1}).to_list(length=None)
         return {str(d["_id"]) for d in docs}
 
-    # ── Private load helpers ──────────────────────────────────────────────
+    # Private load helpers
 
     async def _load_model(self) -> None:
         t = time.perf_counter()

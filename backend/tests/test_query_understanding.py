@@ -28,7 +28,7 @@ def _engine_with_vocab(words):
     return eng
 
 
-# ── Per-word gate ───────────────────────────────────────────────────────────
+# Per-word gate
 
 def test_phrase_kept_when_one_word_known():
     # "segar" never appears as a catalog ingredient word, but "daging" does -
@@ -70,7 +70,7 @@ def test_mixed_known_and_garbage():
     assert ignored == ["xyzbukanbahan"]
 
 
-# ── Fuzzy typo correction ─────────────────────────────────────────────────────
+# Fuzzy typo correction
 
 def test_transposition_typo_corrected():
     # "ayma" -> "ayam" (last two letters transposed): Damerau distance 1.
@@ -103,7 +103,7 @@ def test_garbage_is_not_force_corrected():
     assert ignored == ["xyzbukanbahan"]
 
 
-# ── Vocabulary construction ───────────────────────────────────────────────────
+# Vocabulary construction
 
 def test_build_vocab_collects_words_meeting_min_docs():
     eng = RecommendationEngine()

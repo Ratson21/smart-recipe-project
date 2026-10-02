@@ -17,7 +17,7 @@ router = APIRouter(prefix="/api/v1/recipes", tags=["recipes"])
 _LIST_PROJ = {"ingredients_raw": 0, "steps": 0}
 
 
-# ── Serializers ───────────────────────────────────────────────────────────
+# Serializers
 
 def _to_card(doc: dict) -> RecipeCard:
     return RecipeCard(
@@ -60,7 +60,7 @@ def _build_query(difficulty: Optional[str], max_time: Optional[int]) -> dict:
     return q
 
 
-# ── Endpoints ─────────────────────────────────────────────────────────────
+# Endpoints
 
 @router.get(
     "",

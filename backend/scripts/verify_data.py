@@ -51,7 +51,7 @@ def main():
     print(f"{'='*60}")
     print(f"  Total dokumen : {total_docs:,}\n")
 
-    # ── 1. Sample 20 resep random ────────────────────────────────────────
+    # 1. Sample 20 resep random
     sample = list(col.aggregate([
         {"$sample": {"size": 20}},
         {"$project": {**SAMPLE_FIELDS, "_id": 0}},
@@ -68,7 +68,7 @@ def main():
         print(f"  {title:<35} {ing:>4} {diff:<8}{flag}")
     print(f"{'─'*60}\n")
 
-    # ── 2. Null / missing field check pada seluruh collection ────────────
+    # 2. Null / missing field check pada seluruh collection
     print(f"  Null-check field wajib (seluruh {total_docs:,} dokumen)...")
     null_counts: dict[str, int] = {f: 0 for f in REQUIRED_FIELDS}
 
@@ -88,7 +88,7 @@ def main():
     else:
         print()
 
-    # ── 3. Summary statistik ─────────────────────────────────────────────
+    # 3. Summary statistik
     agg = list(col.aggregate([{"$group": {
         "_id": None,
         "avg_ing":      {"$avg": "$total_ingredients"},
@@ -103,7 +103,7 @@ def main():
     print(f"  Rata-rata waktu masak   : {agg['avg_time']:>8.1f} menit")
     print(f"  Total ulasan            : {agg['total_rating']:>8,}")
 
-    # ── 4. Distribusi difficulty ─────────────────────────────────────────
+    # 4. Distribusi difficulty
     print(f"\n  Distribusi Difficulty Level:")
     diff_pipeline = [
         {"$group": {"_id": "$difficulty_level", "count": {"$sum": 1}}},

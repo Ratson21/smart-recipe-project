@@ -116,7 +116,7 @@ async def main() -> None:
     avg_p_abl = _avg([s[0] for s in abl_scores])
     avg_r_abl = _avg([s[1] for s in abl_scores])
 
-    # ── Print table ──────────────────────────────────────────────────────
+    # Print table
     header = f"{'No':<3} {'Query':<55} {'P@5 WSIE':>9} {'P@5 Abl':>9} {'R@5 WSIE':>9} {'R@5 Abl':>9}"
     print("\n" + header)
     print("-" * len(header))
@@ -130,7 +130,7 @@ async def main() -> None:
     print(f"{'':<3} {'Original WSIE reported (skripsi Table 3.3)':<55} {0.96:>9.4f} {'':>9} "
           f"{0.087:>9.4f} {'':>9}")
 
-    # ── Save results ─────────────────────────────────────────────────────
+    # Save results
     out = {
         "k": K,
         "n_queries": len(TEST_SET),

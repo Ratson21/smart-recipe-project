@@ -107,7 +107,7 @@ class EvalQuery(NamedTuple):
     expected_gt_max: int
 
 
-# ── Test set ──────────────────────────────────────────────────────────────
+# Test set
 # Ukuran GT diukur dari korpus; pita di bawah adalah +-20% dari hasil ukur itu.
 # Semua entri tidak kosong (terukur 8-1089).
 
@@ -163,7 +163,7 @@ TEST_SET: list[EvalQuery] = [
 ]
 
 
-# ── Retrieval ─────────────────────────────────────────────────────────────
+# Retrieval
 
 async def _search(db: AsyncIOMotorDatabase, query: str, k: int) -> list[str]:
     """Retrieve lewat jalur produksi: query understanding lalu semantic search.
@@ -178,7 +178,7 @@ async def _search(db: AsyncIOMotorDatabase, query: str, k: int) -> list[str]:
     return [r["recipe_id"] for r in results][:k]
 
 
-# ── Baseline: TF-IDF ──────────────────────────────────────────────────────
+# Baseline: TF-IDF
 # Dibangun sekali per proses dan di-cache; korpus tidak berubah saat runtime.
 
 _tfidf_cache: Optional[dict] = None
@@ -234,7 +234,7 @@ async def _get_or_build_tfidf(db: AsyncIOMotorDatabase) -> dict:
     return _tfidf_cache
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────
+# Helpers
 
 def _kw_regex(kw: str) -> str:
     """Regex word-boundary yang cocok dengan keyword atau varian ejaannya."""
@@ -366,7 +366,7 @@ def _query_row(
     }
 
 
-# ── Endpoint ──────────────────────────────────────────────────────────────
+# Endpoint
 
 @router.get(
     "/metrics",

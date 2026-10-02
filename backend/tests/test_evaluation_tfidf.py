@@ -74,7 +74,7 @@ def test_tfidf_does_not_normalise_synonyms():
     assert vec.transform(["seafood"]).nnz == 0
 
 
-# ── Kontrak response: sistem vs baseline ───────────────────────────────────
+# Kontrak response: sistem vs baseline
 
 _VERDICT_FIELDS = ("meets_precision_target", "meets_recall_target", "gt_within_expected")
 
@@ -128,7 +128,7 @@ def test_precision_verdict_uses_the_uniform_target():
     assert _query_row(TEST_SET[0], 100, TARGET_RATIO - 0.01, 0.04, 0.0, 0.0)["meets_precision_target"] is False
 
 
-# ── Verdict head-to-head ──────────────────────────────────────────────────
+# Verdict head-to-head
 
 def test_winner_is_the_higher_score():
     assert _winner(0.96, 0.31) == LABEL_SYSTEM
