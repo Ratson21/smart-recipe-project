@@ -1,0 +1,213 @@
+{
+  "k": 5,
+  "n_queries": 20,
+  "n_valid_queries": 20,
+  "avg_precision_at_5_wsie_measured": 0.96,
+  "avg_recall_at_5_wsie_measured": 0.099,
+  "avg_precision_at_5_ablation": 0.87,
+  "avg_recall_at_5_ablation": 0.0574,
+  "avg_precision_at_5_wsie_reported_skripsi": 0.96,
+  "avg_recall_at_5_wsie_reported_skripsi": 0.087,
+  "per_query": [
+    {
+      "no": 1,
+      "query": "ikan, bawang merah, cabai",
+      "category": "biasa",
+      "gt_size": 1089,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0046,
+      "r5_ablation": 0.0046
+    },
+    {
+      "no": 2,
+      "query": "seafood, bawang merah, cabe",
+      "category": "sinonim",
+      "gt_size": 1089,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0046,
+      "r5_ablation": 0.0046
+    },
+    {
+      "no": 3,
+      "query": "tempe, kecap, cabai, garam, lada, daun salam",
+      "category": "biasa",
+      "gt_size": 397,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0126,
+      "r5_ablation": 0.0126
+    },
+    {
+      "no": 4,
+      "query": "tempe, tahu, tomat, lada, kecap",
+      "category": "biasa",
+      "gt_size": 61,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.082,
+      "r5_ablation": 0.082
+    },
+    {
+      "no": 5,
+      "query": "telur, bawang merah, bawang putih, tomat, cabai",
+      "category": "biasa",
+      "gt_size": 432,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0116,
+      "r5_ablation": 0.0116
+    },
+    {
+      "no": 6,
+      "query": "kecap, lada, daging sapi, bakso, kaldu",
+      "category": "biasa",
+      "gt_size": 33,
+      "p5_wsie": 0.4,
+      "p5_ablation": 0.6,
+      "r5_wsie": 0.0606,
+      "r5_ablation": 0.0909
+    },
+    {
+      "no": 7,
+      "query": "telor, garam, kecap, saos, lada, tomat, cabai",
+      "category": "sinonim",
+      "gt_size": 561,
+      "p5_wsie": 0.8,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0071,
+      "r5_ablation": 0.0089
+    },
+    {
+      "no": 8,
+      "query": "tahu, bawang putih, kunyit",
+      "category": "biasa",
+      "gt_size": 289,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0173,
+      "r5_ablation": 0.0173
+    },
+    {
+      "no": 9,
+      "query": "daging, santan, kemiri, kunyit",
+      "category": "biasa",
+      "gt_size": 288,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0174,
+      "r5_ablation": 0.0174
+    },
+    {
+      "no": 10,
+      "query": "daging, santan, garam, kecap, saos",
+      "category": "biasa",
+      "gt_size": 580,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0086,
+      "r5_ablation": 0.0086
+    },
+    {
+      "no": 11,
+      "query": "ayam, kecap, kemiri",
+      "category": "biasa",
+      "gt_size": 746,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0067,
+      "r5_ablation": 0.0067
+    },
+    {
+      "no": 12,
+      "query": "ayam, kecap, saos, lada, tomat",
+      "category": "biasa",
+      "gt_size": 852,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0059,
+      "r5_ablation": 0.0059
+    },
+    {
+      "no": 13,
+      "query": "toge, kol, ayam",
+      "category": "sinonim",
+      "gt_size": 23,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.2174,
+      "r5_ablation": 0.2174
+    },
+    {
+      "no": 14,
+      "query": "unggas, santan, kunyit, tomat, garam, kecap",
+      "category": "sinonim",
+      "gt_size": 35,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.1429,
+      "r5_ablation": 0.1429
+    },
+    {
+      "no": 15,
+      "query": "ikan, kunyit, asam",
+      "category": "biasa",
+      "gt_size": 131,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0382,
+      "r5_ablation": 0.0382
+    },
+    {
+      "no": 16,
+      "query": "lele, kunyit, garam, kecap, lengkuas, santan",
+      "category": "biasa",
+      "gt_size": 8,
+      "p5_wsie": 1.0,
+      "p5_ablation": 0.2,
+      "r5_wsie": 0.625,
+      "r5_ablation": 0.125
+    },
+    {
+      "no": 17,
+      "query": "bayam, bawang putih, garam",
+      "category": "biasa",
+      "gt_size": 44,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.1136,
+      "r5_ablation": 0.1136
+    },
+    {
+      "no": 18,
+      "query": "sayuran hijau, bawang putih, bawang merah, lada, garam, kecap",
+      "category": "sinonim",
+      "gt_size": 21,
+      "p5_wsie": 1.0,
+      "p5_ablation": 0.0,
+      "r5_wsie": 0.2381,
+      "r5_ablation": 0.0
+    },
+    {
+      "no": 19,
+      "query": "kangkung, bawang putih, terasi, garam, kecap",
+      "category": "biasa",
+      "gt_size": 16,
+      "p5_wsie": 1.0,
+      "p5_ablation": 0.6,
+      "r5_wsie": 0.3125,
+      "r5_ablation": 0.1875
+    },
+    {
+      "no": 20,
+      "query": "gurame, garam, kecap, saos, bawang putih",
+      "category": "biasa",
+      "gt_size": 95,
+      "p5_wsie": 1.0,
+      "p5_ablation": 1.0,
+      "r5_wsie": 0.0526,
+      "r5_ablation": 0.0526
+    }
+  ]
+}
