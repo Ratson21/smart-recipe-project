@@ -96,6 +96,8 @@ class RecommendationEngine:
         # Known-ingredient vocabulary (words appearing in ≥ _MIN_INGREDIENT_DOCS
         # recipes). Drives the per-word gate and fuzzy typo correction.
         self.recipe_vocab: frozenset[str] = frozenset()
+        # Recipes-per-word counts, used to break ties in typo correction.
+        self.word_df: Counter[str] = Counter()
         # Per-recipe ingredient count - used as the final-ranking tiebreaker so
         # simpler recipes (fewer ingredients) surface first among equals.
         self.recipe_ingredient_counts: np.ndarray = np.zeros(0, dtype=np.int32)
@@ -219,6 +221,7 @@ class RecommendationEngine:
         df: Counter[str] = Counter()
         for rw in self.recipe_words:
             df.update(rw)
+        self.word_df = df
         self.recipe_vocab = frozenset(
             w for w, c in df.items() if c >= _MIN_INGREDIENT_DOCS
         )
@@ -238,13 +241,18 @@ class RecommendationEngine:
         max_dist = (
             _FUZZY_MAX_DIST_LONG if len(word) >= _FUZZY_LONG_LEN else _FUZZY_MAX_DIST_SHORT
         )
-        match = process.extractOne(
+        matches = process.extract(
             word,
             self.recipe_vocab,
             scorer=DamerauLevenshtein.distance,
             score_cutoff=max_dist,
+            limit=None,
         )
-        return match[0] if match else word
+        if not matches:
+            return word
+        # Closest word wins; among equally close words prefer the one that
+        # appears in the most recipes ("ayma" -> "ayam", not the rare "ama").
+        return min(matches, key=lambda m: (m[1], -self.word_df[m[0]]))[0]
 
     def _correct_phrase(self, cleaned_phrase: str) -> str:
         """Apply _correct_word to every word in an already-cleaned phrase."""
