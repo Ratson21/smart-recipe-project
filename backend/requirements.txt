@@ -6,6 +6,7 @@ pyjwt
 bcrypt
 pydantic[email]
 python-dotenv
+pydantic-settings
 sentence-transformers
 numpy
 scikit-learn
